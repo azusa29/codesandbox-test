@@ -45,16 +45,18 @@
 // const message2 = `私の名前は${name}です。${age}歳です。`
 // console.log(message2);
 
-const func2 = (str) => {
-  return str;
-};
-console.log(func2("func2です"));
+/**
+ * 分割代入
+ */
 
-const func3 = (str) => str;
-console.log(func3("returnいらいない"));
-
-const func4 = (num1, num2) => {
-  return num1 + num2;
+const myProfile = {
+  name: "azu",
+  age: 30
 };
 
-console.log(func4(10, 20));
+const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+console.log(message1);
+
+const { name, age } = myProfile;
+const message2 = `名前は${name}、${age}です。`;
+console.log(message2);
